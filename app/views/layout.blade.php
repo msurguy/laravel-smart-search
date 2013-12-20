@@ -33,10 +33,7 @@
                   <li>
                     <form class="navbar-form" role="search">
                       <div class="form-group" style="width: 240px;">
-                        {{ Form::open(array('class'=>'form-search','url'=>'api/search','method'=>'get')) }}
-                          <div class="arrow-left"></div>
-                          <select id="searchbox" name="q" placeholder="Search products or categories..." class="form-control"></select>
-                        {{ Form::close() }}
+                        <select id="searchbox" name="q" placeholder="Search products or categories..." class="form-control"></select>
                       </div>
                     </form>
                   </li>
