@@ -32,12 +32,16 @@ class ApiSearchController extends \BaseController {
 		if(!$query && $query == '') return Response::json(array(), 400);
 
 		$products = Product::where('published', true)
-				->where('name','like','%'.$query.'%')
-				->orderBy('name','asc')
-				->take(5)
-				->get(array('slug','name','icon'))->toArray();
+			->where('name','like','%'.$query.'%')
+			->orderBy('name','asc')
+			->take(5)
+			->get(array('slug','name','icon'))->toArray();
 
-		$categories = Category::where('name','like','%'.$query.'%')->has('products')->take(5)->get(array('slug', 'name'))->toArray();
+		$categories = Category::where('name','like','%'.$query.'%')
+			->has('products')
+			->take(5)
+			->get(array('slug', 'name'))
+			->toArray();
 
 		// Data normalization
 		$categories = $this->appendValue($categories, url('img/icons/category-icon.png'),'icon');
@@ -49,6 +53,7 @@ class ApiSearchController extends \BaseController {
 		$products = $this->appendValue($products, 'product', 'class');
 		$categories = $this->appendValue($categories, 'category', 'class');
 
+		// Merge all data into one array
 		$data = array_merge($products, $categories);
 
 		return Response::json(array(

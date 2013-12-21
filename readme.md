@@ -1,15 +1,12 @@
-## Laravel SEO admin
+## Laravel smart search implementation
 
-See demo at: http://laravel-seo.gopagoda.com/admin/seo?type=products
+See demo at: http://laravel-smart-search.gopagoda.com/
+Tutorial at: http://maxoffsky.com/code-blog/laravel-shop-tutorial-3-implementing-smart-search
 
-This application demonstrates usage of polymorphic relationships described at (http://maxoffsky.com/code-blog/using-polymorphic-relationships-of-laravel-for-seo-content/) for SEO data of your application.
+This application demonstrates usage of [Selectize.js](https://github.com/brianreavis/selectize.js) plugin to provide the user with Smart Search feature:
+![Smart search in action](https://raw.github.com/msurguy/laravel-smart-search/shop-search.gif)
 
-The admin panel for seo is at "admin/seo" URL (relative to the application's root)
-
-You can add/edit title, description and keywords for multiple types of data in the application by using polymorphic relationships.
-
-The controller that deals with the SEO administration is in app/controllers/Admin/SeoController.php
-Feel free to modify it to add more types of data that you want to include in the SEO administration. 
+The search API controller is in app/controllers/Api/SearchController.php
 
 ### Star this repo!
 
