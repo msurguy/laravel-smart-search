@@ -4,7 +4,7 @@ See demo at: http://laravel-smart-search.gopagoda.com/
 Tutorial at: http://maxoffsky.com/code-blog/laravel-shop-tutorial-3-implementing-smart-search
 
 This application demonstrates usage of [Selectize.js](https://github.com/brianreavis/selectize.js) plugin to provide the user with Smart Search feature:
-![Smart search in action](https://raw.github.com/msurguy/laravel-smart-search/shop-search.gif)
+![Smart search in action](https://raw.github.com/msurguy/laravel-smart-search/master/shop-search.gif)
 
 The search API controller is in app/controllers/Api/SearchController.php
 
