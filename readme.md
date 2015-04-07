@@ -1,6 +1,6 @@
 ## Laravel smart search implementation
 
-See demo at: http://laravel-smart-search.gopagoda.com/
+See demo at: http://demos.maxoffsky.com/shop-search/
 Tutorial at: http://maxoffsky.com/code-blog/laravel-shop-tutorial-3-implementing-smart-search
 
 This application demonstrates usage of [Selectize.js](https://github.com/brianreavis/selectize.js) plugin to provide the user with Smart Search feature:
