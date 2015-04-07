@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => isset($_SERVER['DB1_HOST']) ? $_SERVER['DB1_HOST'] : 'localhost',
-			'database'  => isset($_SERVER['DB1_NAME']) ? $_SERVER['DB1_NAME'] : 'shop-search',
-			'username'  => isset($_SERVER['DB1_USER']) ? $_SERVER['DB1_USER'] : 'root',
-			'password'  => isset($_SERVER['DB1_PASS']) ? $_SERVER['DB1_PASS'] : 'root',
+            'host'      => getenv('db_host'),
+            'database'  => getenv('db_name'),
+            'username'  => getenv('db_username'),
+            'password'  => getenv('db_password'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -92,7 +92,7 @@ return array(
 	|
 	| This table keeps track of all the migrations that have already run for
 	| your application. Using this information, we can determine which of
-	| the migrations on disk have not actually be run in the databases.
+	| the migrations on disk haven't actually been run in the database.
 	|
 	*/
 
@@ -109,16 +109,17 @@ return array(
 	|
 	*/
 
-	'redis' => array(
+   
+    'redis' => array(
 
-		'cluster' => true,
+        'cluster' => false,
 
-		'default' => array(
-			'host'     => 'tunnel.pagodabox.com',
-			'port'     => 6379,
-			'database' => 0,
-		),
+        'default' => array(
+            'host'     => '127.0.0.1',
+            'port'     => 6379,
+            'database' => 0,
+        ),
 
-	),
+    ),
 
 );
